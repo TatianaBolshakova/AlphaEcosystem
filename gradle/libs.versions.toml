@@ -17,9 +17,11 @@ okhttp = "4.12.0"
 logging = "4.11.0"
 roomRuntime = "2.6.1"
 roomKtx = "2.6.1"
-roomRxjava2 ="2.6.1"
 room = "2.6.1"
 ksp = "1.9.0-1.0.12"
+dagger = "2.49"
+daggerCompiler = "2.49"
+jetbrainsKotlinJvm = "1.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,12 +40,15 @@ okhttp3 = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okht
 logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logging" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomKtx" }
-room-rxjava2 = { group = "androidx.room", name = "room-rxjava2", version.ref = "roomRxjava2" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "daggerCompiler" }
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 

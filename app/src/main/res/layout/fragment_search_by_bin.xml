@@ -26,7 +26,7 @@
             android:hint="@string/enter_bin_card"
             android:inputType="numberDecimal" />
 
-    <com.example.alphaecosystem.presentation.CardInfo
+    <com.example.alphaecosystem.presentation.customview.CardInfo
         android:id="@+id/cardInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

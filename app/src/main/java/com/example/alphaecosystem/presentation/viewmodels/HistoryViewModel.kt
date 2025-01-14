@@ -3,15 +3,16 @@ package com.example.alphaecosystem.presentation.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.alphaecosystem.data.db.Card
-import com.example.alphaecosystem.data.db.CardDao
+import com.example.data.db.Card
+import com.example.data.db.CardDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HistoryViewModel(
+class HistoryViewModel @Inject constructor (
      private val cardDao: CardDao
 ): ViewModel(){
 

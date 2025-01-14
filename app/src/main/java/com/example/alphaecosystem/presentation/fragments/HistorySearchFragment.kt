@@ -11,8 +11,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.alphaecosystem.R
-import com.example.alphaecosystem.data.db.App
-import com.example.alphaecosystem.data.db.CardDao
+import com.example.alphaecosystem.app.App
+import com.example.data.db.CardDao
 import com.example.alphaecosystem.databinding.FragmentHistorySearchBinding
 import com.example.alphaecosystem.presentation.adapters.CardAdapter
 import com.example.alphaecosystem.presentation.viewmodels.HistoryViewModel
@@ -26,6 +26,7 @@ class HistorySearchFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val cardAdapter = CardAdapter()
+
     private val vmHistory: HistoryViewModel by viewModels {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {

@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Alpha Ecosystem"
 include(":app")
+include(":data")
+include(":domain")

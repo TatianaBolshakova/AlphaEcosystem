@@ -3,7 +3,7 @@ package com.example.alphaecosystem.presentation.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.alphaecosystem.data.db.Card
+import com.example.data.db.Card
 import com.example.alphaecosystem.databinding.CardInfoBinding
 import com.example.alphaecosystem.presentation.viewholders.CardViewHolder
 

@@ -1,6 +1,6 @@
-package com.example.alphaecosystem.data.network
+package com.example.data.network
 
-import com.example.alphaecosystem.data.models.InfoByBinCard
+import com.example.domain.models.InfoByBinCard
 import retrofit2.http.GET
 import retrofit2.http.Path
 

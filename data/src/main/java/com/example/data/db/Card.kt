@@ -1,4 +1,4 @@
-package com.example.alphaecosystem.data.db
+package com.example.data.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -9,23 +9,23 @@ data class Card(
 
     @PrimaryKey
     @ColumnInfo(name = "bin")
-    val bin: Int,
+    val bin: String ,
     @ColumnInfo(name = "type")
-    val type: String,
+    val type: String ,
     @ColumnInfo(name = "name")
-    val name: String,
+    val name: String ,
     @ColumnInfo(name = "emoji")
-    val emoji: String,
+    val emoji: String ,
     @ColumnInfo(name = "latitude")
     val latitude: String,
     @ColumnInfo(name = "longitude")
-    val longitude: String,
+    val longitude: String ,
     @ColumnInfo(name = "name_bank")
-    val nameBank: String,
+    val nameBank: String ,
     @ColumnInfo(name = "url")
-    val url: String,
+    val url: String ,
     @ColumnInfo(name = "phone")
-    val phone: String,
+    val phone: String ,
     @ColumnInfo(name = "city")
-    val city: String,
+    val city: String ,
 )

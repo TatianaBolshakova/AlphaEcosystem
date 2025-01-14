@@ -1,4 +1,4 @@
-package com.example.alphaecosystem.data.models
+package com.example.domain.models
 
 data class InfoByBinCard(
     val scheme: String,

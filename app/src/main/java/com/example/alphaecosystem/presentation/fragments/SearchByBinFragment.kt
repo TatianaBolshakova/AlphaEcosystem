@@ -13,12 +13,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.alphaecosystem.R
-import com.example.alphaecosystem.data.db.App
-import com.example.alphaecosystem.data.db.Card
-import com.example.alphaecosystem.data.db.CardDao
+import com.example.alphaecosystem.app.App
+import com.example.data.db.Card
 import com.example.alphaecosystem.databinding.FragmentSearchByBinBinding
+import com.example.alphaecosystem.di.DaggerAppComponent
 import com.example.alphaecosystem.presentation.viewmodels.HistoryViewModel
 import com.example.alphaecosystem.presentation.viewmodels.SearchByBinViewModel
+import com.example.data.db.CardDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.take
@@ -26,7 +27,10 @@ import kotlinx.coroutines.launch
 
 class SearchByBinFragment : Fragment() {
 
-    private val vmSearch: SearchByBinViewModel by viewModels()
+
+    private val vmSearch: SearchByBinViewModel by viewModels {
+        DaggerAppComponent.create().searchViewModelFactory()
+    }
     private val vmHistory: HistoryViewModel by viewModels {
         object : ViewModelProvider.Factory {
             override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -63,19 +67,19 @@ class SearchByBinFragment : Fragment() {
                     vmSearch.info.take(1).collect {
 
                        newCard = Card(
-                            bin = bin,
-                            type = it?.type?: "Type: -",
-                            name = it?.country?.name?: "Country: -",
-                            emoji = it?.country?.emoji?: "",
-                            latitude = "(${it?.country?.latitude};",
-                            longitude = "${it?.country?.longitude})",
-                            nameBank = it?.bank?.name?: "Bank: -",
-                            url = it?.bank?.url?: "Url: -",
-                            phone = it?.bank?.phone?: "Phone: -",
-                            city = it?.bank?.city?: "City: -"
-                        )
+                           bin = " ${bin.toString().substring(0,4)} ${bin.toString().substring(4)} ...",
+                           type = it?.type ?: "Type: -",
+                           name = it?.country?.name ?: "Country: -",
+                           emoji = it?.country?.emoji ?: "",
+                           latitude = "(${it?.country?.latitude};",
+                           longitude = "${it?.country?.longitude})",
+                           nameBank = it?.bank?.name ?: "Bank: -",
+                           url = it?.bank?.url ?: "Url: -",
+                           phone = it?.bank?.phone ?: "Phone: -",
+                           city = it?.bank?.city ?: "City: -"
+                       )
                         binding.cardInfo.apply {
-                                setBin(newCard.bin)
+                                setBin(bin)
                                 setType(newCard.type)
                                 setName(newCard.name)
                                 setEmoji(newCard.emoji)
