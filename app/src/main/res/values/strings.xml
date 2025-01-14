@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Alpha Ecosystem</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="enter_bin_card">Enter BIN card (8 digits)</string>
+    <string name="hello_history_search_fragment">Hello history search fragment</string>
+    <string name="search_btn">Search</string>
+    <string name="back_btn">Back\n</string>
+    <string name="open_history_btn">Open history</string>
+    <string name="country">Country:</string>
+    <string name="country_name">Country name</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="card">Card: </string>
+    <string name="type">Type</string>
+    <string name="bank">Bank:</string>
+    <string name="url">Url</string>
+    <string name="name_bank">Name bank</string>
+    <string name="phone">phone</string>
+    <string name="city">city</string>
+    <string name="error">Error: the number of requests has been exceeded, please try again later</string>
+    <string name="bin">bin</string>
+    <string name="history_search">History search</string>
+</resources>
